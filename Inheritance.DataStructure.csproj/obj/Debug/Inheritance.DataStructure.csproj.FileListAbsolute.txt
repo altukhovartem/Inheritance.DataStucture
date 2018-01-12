@@ -1,0 +1,2 @@
+C:\MyRepo\Inheritance.DataStucture\Inheritance.DataStructure.csproj\obj\Debug\Inheritance.DataStructure.csprojResolveAssemblyReference.cache
+C:\MyRepo\Inheritance.DataStucture\Inheritance.DataStructure.csproj\obj\Debug\Inheritance.DataStructure.csproj.CoreCompileInputs.cache
