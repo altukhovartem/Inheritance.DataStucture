@@ -45,20 +45,35 @@ namespace Inheritance.DataStructure
                 throw new Exception("Can not compare objects of different types");
             }
 
-            if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == -1)
-                return -1;
-            else if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == 1)
-                return 1;
-            else if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == -1)
-                return -1;
-            else if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == 1)
-                return 1;
-            else if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == -1)
-                return -1;
-            else if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == 1)
-                return 1;
+            //if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == -1)
+            //    return -1;
+            //else if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == 1)
+            //    return 1;
+            //else if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == -1)
+            //    return -1;
+            //else if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == 1)
+            //    return 1;
+            //else if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == -1)
+            //    return -1;
+            //else if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == 1)
+            //    return 1;
+            //else
+            //    return 0;
+
+            if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == 0)
+            {
+                if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == 0)
+                {
+                    if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == 0)
+                        return 0;
+                    else
+                        return this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic);
+                }
+                else
+                    return this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType);
+            }
             else
-                return 0;
+                return string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle);
         }
 
         public static bool operator >(Category c1, Category c2)
