@@ -26,7 +26,7 @@ namespace Inheritance.DataStructure
             {
                 return false;
             }
-            if (this.CurrentTitle == CategoryToCompare.CurrentTitle && this.CurrentMessageType == CategoryToCompare.CurrentMessageType && this.CurrentMessageTopic == CategoryToCompare.CurrentMessageTopic)
+            if (this.CompareTo(CategoryToCompare) == 0)
                 return true;
             else
                 return false;
