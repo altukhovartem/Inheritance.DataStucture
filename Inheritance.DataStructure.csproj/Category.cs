@@ -8,13 +8,13 @@ namespace Inheritance.DataStructure
 {
     class Category
     {
-        public string CurrentBukva { get; set; }
+        public string CurrentTitle { get; set; }
         public MessageType CurrentMessageType { get; set; }
         public MessageTopic CurrentMessageTopic { get; set; }
 
-        public Category(string bukva, MessageType messageType, MessageTopic messageTopic)
+        public Category(string title, MessageType messageType, MessageTopic messageTopic)
         {
-            CurrentBukva = bukva;
+            CurrentTitle = title;
             CurrentMessageType = messageType;
             CurrentMessageTopic = messageTopic;
         }
@@ -24,9 +24,12 @@ namespace Inheritance.DataStructure
             Category CategoryToCompare = obj as Category;
             if (CategoryToCompare == null)
             {
-                throw new Exception();
+                return false;
             }
-
+            if (this.CurrentTitle == CategoryToCompare.CurrentTitle && this.CurrentMessageType == CategoryToCompare.CurrentMessageType && this.CurrentMessageTopic == CategoryToCompare.CurrentMessageTopic)
+                return true;
+            else
+                return false;
 
         }
     }
