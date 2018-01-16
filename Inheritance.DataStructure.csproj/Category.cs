@@ -32,6 +32,11 @@ namespace Inheritance.DataStructure
                 return false;
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         public int CompareTo(object obj)
         {
             Category CategoryToCompare = obj as Category;
@@ -40,22 +45,57 @@ namespace Inheritance.DataStructure
                 throw new Exception("Can not compare objects of different types");
             }
 
-            if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == 1)
-                return 1;
-            else if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == -1)
+            if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == -1)
                 return -1;
-            else if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == 1)
+            else if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == 1)
                 return 1;
             else if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == -1)
                 return -1;
-            else if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == 1)
+            else if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == 1)
                 return 1;
             else if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == -1)
                 return -1;
+            else if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == 1)
+                return 1;
             else
                 return 0;
         }
 
+        public static bool operator >(Category c1, Category c2)
+        {
+            int result = c1.CompareTo(c2);
+            if (result == 1)
+                return true;
+            else
+                return false;
+        }
+
+        public static bool operator <(Category c1, Category c2)
+        {
+            int result = c1.CompareTo(c2);
+            if (result == -1)
+                return true;
+            else
+                return false;
+        }
+
+        public static bool operator >=(Category c1, Category c2)
+        {
+            int result = c1.CompareTo(c2);
+            if (result == 0 || result == 1)
+                return true;
+            else
+                return false;
+        }
+
+        public static bool operator <=(Category c1, Category c2)
+        {
+            int result = c1.CompareTo(c2);
+            if (result == 0 || result == -1)
+                return true;
+            else
+                return false;
+        }
 
         public override string ToString()
         {
