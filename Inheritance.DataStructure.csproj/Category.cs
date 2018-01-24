@@ -34,7 +34,11 @@ namespace Inheritance.DataStructure
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            unchecked
+            {
+                return new object[] { CurrentTitle, CurrentMessageType, CurrentMessageTopic }
+                    .Aggregate(23, (a, f) => (a * 397) * f.GetHashCode());
+            }
         }
 
         public int CompareTo(object obj)
