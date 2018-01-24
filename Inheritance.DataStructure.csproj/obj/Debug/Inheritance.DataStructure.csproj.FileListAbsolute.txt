@@ -10,3 +10,8 @@ C:\MyRepo\Inheritance.DataStucture\Inheritance.DataStructure.csproj\obj\Debug\In
 C:\source\Inheritance.DataStucture\Inheritance.DataStructure.csproj\bin\Debug\Inheritance.DataStructure.exe.config
 C:\source\Inheritance.DataStucture\Inheritance.DataStructure.csproj\obj\Debug\Inheritance.DataStructure.exe
 C:\source\Inheritance.DataStucture\Inheritance.DataStructure.csproj\obj\Debug\Inheritance.DataStructure.pdb
+C:\source\Inheritance.DataStucture\Inheritance.DataStructure.csproj\bin\Debug\Inheritance.DataStructure.exe
+C:\source\Inheritance.DataStucture\Inheritance.DataStructure.csproj\bin\Debug\Inheritance.DataStructure.pdb
+C:\source\Inheritance.DataStucture\Inheritance.DataStructure.csproj\bin\Debug\nunit.framework.dll
+C:\source\Inheritance.DataStucture\Inheritance.DataStructure.csproj\bin\Debug\nunitlite.dll
+C:\source\Inheritance.DataStucture\Inheritance.DataStructure.csproj\obj\Debug\Inheritance.DataStructure.csprojResolveAssemblyReference.cache

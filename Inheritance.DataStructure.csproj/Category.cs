@@ -43,6 +43,7 @@ namespace Inheritance.DataStructure
 
         public int CompareTo(object obj)
         {
+            int comparrisonResult;
             Category CategoryToCompare = obj as Category;
             if (CategoryToCompare == null)
             {
@@ -64,20 +65,23 @@ namespace Inheritance.DataStructure
             //else
             //    return 0;
 
-            if (string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle) == 0)
+            comparrisonResult = string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle);
+            if (comparrisonResult == 0)
             {
-                if (this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType) == 0)
+                comparrisonResult = this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType);
+                if (comparrisonResult == 0)
                 {
-                    if (this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic) == 0)
+                    comparrisonResult = this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic);
+                    if (comparrisonResult == 0)
                         return 0;
                     else
-                        return this.CurrentMessageTopic.CompareTo(CategoryToCompare.CurrentMessageTopic);
+                        return comparrisonResult;
                 }
                 else
-                    return this.CurrentMessageType.CompareTo(CategoryToCompare.CurrentMessageType);
+                    return comparrisonResult;
             }
             else
-                return string.Compare(this.CurrentTitle, CategoryToCompare.CurrentTitle);
+                return comparrisonResult;
         }
 
         public static bool operator >(Category c1, Category c2)
